@@ -1,0 +1,8 @@
+div.menu_development {
+	padding: 10px;
+	float: right; 
+}
+div.menu_development a{
+	color: orange;
+	margin-left: 10px;
+}
