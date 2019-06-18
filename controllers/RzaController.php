@@ -32,11 +32,11 @@ class RzaController extends Controller
             $testId = \Yii::$app->request->get();
         }
 		$test = new Test;
-		$test->getTest($testId);	
-		
+		$test->getTest($testId);
+		$questions = $test->questions;
 		
 		return $this->renderPartial('_test', [
-			'test' => $test, 
+			'questions' => $questions,
 		]);
 	}
 

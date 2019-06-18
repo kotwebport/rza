@@ -10,8 +10,6 @@ $("document").ready(function () {
                 'id': id
             },
             success: function (res) {
-				console.log(id);
-				console.log(res);				
                 $('.js_content').html(res);
             },
             error: function () {
