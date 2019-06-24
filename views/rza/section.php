@@ -3,29 +3,14 @@
 use yii\helpers\Url;
 use yii\bootstrap\NavBar;
 
-NavBar::begin([
-    'brandLabel' => 'На главную',
-    'brandUrl' => Yii::$app->homeUrl,
-    'options' => [
-        'class' => 'navbar-inverse navbar-fixed-top',
-
-    ],
-]);
 ?>
-
-<div class="menu_development">
+<a href="<?= Url::toRoute(['rza/index'])?>">К разделам <a/>
+<div class="">
     <?php foreach ($menu->tests as $test): ?>
-        <a class="js-test navbar-right" href="<?= Url::toRoute(['rza/test', 'testId' => $test['id']]); ?>"
-           data-url="rza/test" data-id="<?= $test['id'] ?>"><?= $test['name'] ?></a>
+        <li><a class="js-test" href="<?= Url::toRoute(['rza/test', 'testId' => $test['id']]); ?>"
+			   data-url="rza/test" data-id="<?= $test['id'] ?>"><?= $test['name'] ?></a></li>
     <?php endForeach; ?>
 </div>
-<?php
-NavBar::end();
-?>
-<br/>
-<br/>
-<br/>
-<br/>
 <h1><?= $menu->section->name ?></h1>
 <div class="js_content">
 

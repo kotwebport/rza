@@ -30,33 +30,16 @@ ltAppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
- <?php
-	
-    NavBar::begin([
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    ?>
-	<?php $sections = RzaSection::find()->asArray()->all();	?>
-	<div class = "menu_development">
+<div class="">
+ 	<?php $sections = RzaSection::find()->asArray()->indexBy('id')->orderBy('id')->all();	?>	
+	<ul>
 		<?php foreach($sections as $section): ?>
-    	<a class = "navbar-right" href="<?= Url::toRoute(['rza/section', 'sectionId' => $section['id']]); ?>"><?=$section['name'] ?></a>
-    	<?php endForeach; ?>
-	</div>
-
-    <?php
-    NavBar::end();
-    ?>
-	
-	<div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
+   			<li><a class = "" href="<?= Url::toRoute(['rza/section', 'sectionId' => $section['id']]); ?>"><?=$section['name'] ?></a></li>
+   		<?php endForeach; ?>
+	</ul>		
+</div>
+<div class="container">
         <?= $content ?>
-    </div>
 </div>
 
 <footer class="footer">

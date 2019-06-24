@@ -26,9 +26,9 @@ class m190608_025117_rza extends Migration
 		$this->createTable('rza_question', [
             'id' => $this->primaryKey(),
             'test_id' => $this->integer(),
-            'question' => $this->text(),
-            'answer' => $this->text(),
-            'image' => $this->string(),            
+            'question' => $this->text()->notNull(),
+            'answer' => $this->text()->notNull(),
+            'image' => $this->string()->defaultValue(null)      
         ]);	
 		
 		$this->addForeignKey('test-section-fk-rza', 'rza_test', 'section_id', 'rza_section', 'id', 'SET NULL', 'CASCADE');

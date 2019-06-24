@@ -12,7 +12,7 @@ class Menu
 	public function getMenu($sectionId)
 	{
 		$this->section = RzaSection::findOne($sectionId);		
-		$this->tests = RzaTest::find()->where(['section_id' => $sectionId])->asArray()->all();
+		$this->tests = RzaTest::find()->where(['section_id' => $sectionId])->asArray()->indexBy('id')->orderBy('id')->all();
 				
 	}	
 }

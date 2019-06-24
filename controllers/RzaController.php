@@ -13,7 +13,7 @@ class RzaController extends Controller
     public function actionIndex()
     {
 		$this->layout = 'rza/main-index';
-        return $this->render('index');
+        return $this->render('index');		
     }
 
 	public function actionSection($sectionId = null)
