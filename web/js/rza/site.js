@@ -1,5 +1,5 @@
 $("document").ready(function () {
-    $('.js-test').on('click', function () {
+    $('.js-getAjax').on('click', function () {
 		var id = $(this).data('id');
         var url = '?r=' + $(this).data('url');
         $.ajax({
@@ -10,7 +10,7 @@ $("document").ready(function () {
                 'id': id
             },
             success: function (res) {
-                $('.js_content').html(res);
+				$('.js-section').html(res);
             },
             error: function () {
                 alert('Сбой передачи');
@@ -18,6 +18,29 @@ $("document").ready(function () {
         });
         return false;
     });
+	
+	$('.js-section').on('click', '.js-getAjax', function () {
+		var id = $(this).data('id');
+        var url = '?r=' + $(this).data('url');
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'html',
+            data: {
+                'id': id
+            },
+            success: function (res) {
+			    $('.js-test').html(res);
+            },
+            error: function () {
+                alert('Сбой передачи');
+            }
+        });
+        return false;
+    });
+	
+	
+	
 
     $('.js_start').on('click', '.vis_close', function () {
         $(this).toggleClass("vis_close vis_open");

@@ -11,7 +11,7 @@ class Menu
 	
 	public function getMenu($sectionId)
 	{
-		$this->section = RzaSection::findOne($sectionId);		
+		$this->section = RzaSection::find($sectionId)->asArray()->one();		
 		$this->tests = RzaTest::find()->where(['section_id' => $sectionId])->asArray()->indexBy('id')->orderBy('id')->all();
 				
 	}	

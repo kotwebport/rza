@@ -34,7 +34,7 @@ ltAppAsset::register($this);
  	<?php $sections = RzaSection::find()->asArray()->indexBy('id')->orderBy('id')->all();	?>	
 	<ul>
 		<?php foreach($sections as $section): ?>
-   			<li><a class = "" href="<?= Url::toRoute(['rza/section', 'sectionId' => $section['id']]); ?>"><?=$section['name'] ?></a></li>
+   			<li><a class = "js-getAjax" href="<?= Url::toRoute(['rza/section', 'sectionId' => $section['id']]); ?>" data-url="rza/section" data-id="<?= $section['id']; ?>"><?=$section['name'] ?></a></li>
    		<?php endForeach; ?>
 	</ul>		
 </div>

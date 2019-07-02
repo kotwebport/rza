@@ -18,21 +18,26 @@ class RzaController extends Controller
 
 	public function actionSection($sectionId = null)
 	{	
-		$menu = new Menu;
-		$menu->getMenu($sectionId);	
 		
-		return $this->render('section', [
-			'menu' => $menu,
+		if (\Yii::$app->request->isAjax) {
+            $ajax = \Yii::$app->request->get();
+        }		
+		$menu = new Menu;
+		$menu->getMenu($ajax['id']);
+				
+		return $this->renderPartial('_section', [
+			'section' => $menu->section,
+			'tests' => $menu->tests,
 		]);		
 	}
 	
 	public function actionTest($testId = null)
 	{
 		if (\Yii::$app->request->isAjax) {
-            $testId = \Yii::$app->request->get();
+            $ajax = \Yii::$app->request->get();
         }
 		$test = new Test;
-		$test->getTest($testId);
+		$test->getTest($ajax['id']);
 		$questions = $test->questions;
 		
 		return $this->renderPartial('_test', [
