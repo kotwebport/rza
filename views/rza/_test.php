@@ -9,7 +9,7 @@ use yii\helpers\Html;
 	<h2>Ответ: <?= $question['answer']?></h2>
 	<?php if($question['image']): ?>
 		<?php $url = '@web/images/rza/question/'.$question['image']?>
-		<?= Html::img($url, ['alt' => 'image', 'width' => '50%', 'class' => 'img']) ?>
+		<?= Html::img($url, ['alt' => 'image', 'width' => '100%', 'class' => 'img']) ?>
 	<?php endIf; ?>
 <?php endforeach; ?>
 

@@ -4,6 +4,7 @@ use yii\helpers\Url;
 use yii\bootstrap\NavBar;
 
 ?>
+<h1><?= $section['name'] ?></h1>
 <a href="<?= Url::toRoute(['rza/index'])?>">К разделам <a/>
 <div class="">
     <?php foreach ($tests as $test): ?>
@@ -11,7 +12,6 @@ use yii\bootstrap\NavBar;
 			   data-url="rza/test" data-id="<?= $test['id'] ?>"><?= $test['name'] ?></a></li>
     <?php endForeach; ?>
 </div>
-<h1><?= $section['name'] ?></h1>
 <div class="js-test">
 
 </div>
