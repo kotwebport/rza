@@ -1,3 +1,18 @@
 body{
-	background-color: orange;
+	 background: url("/images/rza/wallpaper.png") no-repeat fixed;
 }
+
+a.nav-link{
+	color: rgb(253, 247, 151);	
+}
+
+ul.nav {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+div.test-box{
+	 color: white;	
+}
+
+.nav  li  a:hover, .nav  li  a:focus {
+    background-color: rgba(3, 33, 3, 0.68);
