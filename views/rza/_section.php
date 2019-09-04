@@ -4,13 +4,14 @@ use yii\helpers\Url;
 use yii\bootstrap\NavBar;
 
 ?>
-<h1><?= $section['name'] ?></h1>
-<a href="<?= Url::toRoute(['rza/index'])?>">К разделам <a/>
 <div class="">
+    <ul class="test-box nav flex-column">
+        <p><?= $section['name']; ?></p>
     <?php foreach ($tests as $test): ?>
-        <li><a class="js-getAjax" href="<?= Url::toRoute(['rza/test', 'testId' =>3]); ?>"
+        <li><a class="nav-item js-getAjax" href="<?= Url::toRoute(['rza/test', 'testId' =>3]); ?>"
 			   data-url="rza/test" data-id="<?= $test['id'] ?>"><?= $test['name'] ?></a></li>
     <?php endForeach; ?>
+    </ul>
 </div>
 <div class="js-test">
 

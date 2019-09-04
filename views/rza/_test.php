@@ -5,7 +5,7 @@ use yii\helpers\Html;
 ?>
 
 <?php foreach ($questions as $question): ?>
-<div class="test-box">
+<div class="test-content">
 	<p class="question">Вопрос: <?= $question['question']?></p>
 	<p class="answer">Ответ: <?= $question['answer']?></p>
 	<?php if($question['image']): ?>

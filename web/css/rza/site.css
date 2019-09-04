@@ -1,18 +1,42 @@
-body{
-	 background: url("/images/rza/wallpaper.png") no-repeat fixed;
+body {
+    background: url("../../images/rza/wallpaper.png") no-repeat fixed;
 }
 
-a.nav-link{
-	color: rgb(253, 247, 151);	
+a.nav-link, a.nav-item{
+    color: rgb(253, 247, 151);
 }
 
-ul.nav {
-    background: rgba(0, 0, 0, 0.6);
+ul.section-box {
+    background: rgba(3, 33, 3, 0.68);
+    position: fixed;
+    left: 30%;
+    padding: 0 100px 0 100px;
+    border-radius: 0 0 75px 75px;
+}
+ul.test-box p {
+    margin-left: 5px;
+    padding-top: 15px;
+    text-align: center;
+    color: #02ff00;
 }
 
-div.test-box{
-	 color: white;	
+
+
+ul.test-box {
+    background: rgba(3, 33, 3, 0.68);
+    position: fixed;
+    width: 200px;
+    font-style: italic;
+    left: 0;
+    top: 0;
 }
 
-.nav  li  a:hover, .nav  li  a:focus {
-    background-color: rgba(3, 33, 3, 0.68);
+
+
+div.test-content {
+    color: white;
+}
+
+.nav li a:hover, .nav li a:focus {
+    background-color: rgba(3, 33, 3, 0.4);
+}
