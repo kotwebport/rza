@@ -5,8 +5,7 @@ use yii\bootstrap\NavBar;
 
 ?>
 <div class="">
-    <ul class="test-box nav flex-column">
-        <p><?= $section['name']; ?></p>
+    <ul class="test-box nav flex-column">      
     <?php foreach ($tests as $test): ?>
         <li><a class="nav-item js-getAjax" href="<?= Url::toRoute(['rza/test', 'testId' =>3]); ?>"
 			   data-url="rza/test" data-id="<?= $test['id'] ?>"><?= $test['name'] ?></a></li>

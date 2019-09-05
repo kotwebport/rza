@@ -11,14 +11,16 @@ $("document").ready(function () {
             },
             success: function (res) {
 				$('.js-section').html(res);
+				$('.test-box').css("display", "block");
             },
             error: function () {
                 alert('Сбой передачи');
             }
         });
         return false;
-    });
-	
+    });	
+		
+					
 	$('.js-section').on('click', '.js-getAjax', function () {
 		var id = $(this).data('id');
         var url = '?r=' + $(this).data('url');
@@ -31,16 +33,14 @@ $("document").ready(function () {
             },
             success: function (res) {
 			    $('.js-test').html(res);
+				$('.test-box').css("display", "none");
             },
             error: function () {
                 alert('Сбой передачи');
             }
         });
-        return false;
-    });
-	
-	
-	
+        return false;			
+    });	
 
     $('.js_start').on('click', '.vis_close', function () {
         $(this).toggleClass("vis_close vis_open");

@@ -30,9 +30,10 @@ ltAppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="">
+<div id="section">
+	
  	<?php $sections = RzaSection::find()->asArray()->indexBy('id')->orderBy('id')->all();	?>	
-	<ul class="section-box nav nav-pills">
+	<ul class="section-box nav justify-content-center nav-pills">
 		<?php foreach($sections as $section): ?>
    			<li class="nav-item"><a class = "nav-link js-getAjax" href="<?= Url::toRoute(['rza/section', 'sectionId' => $section['id']]); ?>" data-url="rza/section" data-id="<?= $section['id']; ?>"><?=$section['name'] ?></a></li>
    		<?php endForeach; ?>
