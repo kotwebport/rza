@@ -53,4 +53,12 @@ div.test-content {
     background-color: rgba(82, 61, 67, 0.5);
 }
 
+.answer, .img {
+	display: none;
+}
 
+.test-box-content {
+	background: black;
+	margin-top: 50px;
+	padding: 10px;
+}

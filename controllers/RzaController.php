@@ -21,14 +21,15 @@ class RzaController extends Controller
 		
 		if (\Yii::$app->request->isAjax) {
             $ajax = \Yii::$app->request->get();
-        }		
+		}		
 		$menu = new Menu;
 		$menu->getMenu($ajax['id']);
-				
+					
 		return $this->renderPartial('_section', [
 			'section' => $menu->section,
 			'tests' => $menu->tests,
-		]);		
+		]); 
+			
 	}
 	
 	public function actionTest($testId = null)
@@ -38,9 +39,12 @@ class RzaController extends Controller
         }
 		$test = new Test;
 		$test->getTest($ajax['id']);
-		$questions = $test->questions;
+		$test = $test->test;
+		$questions = $test->questions;	
+		
 		
 		return $this->renderPartial('_test', [
+			'testName' => $test->name,
 			'questions' => $questions,
 		]);
 	}

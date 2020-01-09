@@ -7,7 +7,7 @@ $("document").ready(function () {
             type: 'GET',
             dataType: 'html',
             data: {
-                'id': id
+               'id': id
             },
             success: function (res) {
 				$('.js-section').html(res);
