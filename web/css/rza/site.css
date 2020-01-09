@@ -2,15 +2,15 @@ body {
     background: url("../../images/rza/wallpaper.png") no-repeat fixed;
 }
 
-a.nav-link, a.nav-item{
+a.nav-link, a.nav-item {
     color: rgb(255, 255, 255);
-	font-size: 1.2em;
-	font-style: italic;
+    font-size: 1.2em;
+    font-style: italic;
 }
 
 div#section {
-	position: fixed;
-	left: 50%;
+    position: fixed;
+    left: 50%;
 }
 
 ul.section-box {
@@ -18,8 +18,9 @@ ul.section-box {
     position: fixed;
     left: 0;
     padding: 0 100px 0 100px;
-    border-radius: 0 0 75px 0;	
+    border-radius: 0 0 75px 0;
 }
+
 ul.test-box p {
     margin-left: 5px;
     padding-top: 15px;
@@ -28,21 +29,21 @@ ul.test-box p {
 }
 
 ul.test-box {
-	display: none;
+    display: none;
     background: rgba(84, 64, 69, 0.51);
     position: fixed;
     width: 100%;
     font-style: italic;
     left: 0;
     top: 150px;
-	padding: 50px 200px 50px 200px;
+    padding: 50px 200px 50px 200px;
     text-align: center;
 }
 
-ul.test-box a{
-	padding: 20px 0 20px 0;
-	font-size: 1.5em;
-	border-radius: 30px;
+ul.test-box a {
+    padding: 20px 0 20px 0;
+    font-size: 1.5em;
+    border-radius: 30px;
 }
 
 div.test-content {
@@ -54,11 +55,36 @@ div.test-content {
 }
 
 .answer, .img {
-	display: none;
+    display: none;
+}
+
+.test-name {
+    background: rgba(12, 18, 35, 0.78);
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    padding: 5px 60px 15px 15px;
+    border-style: solid;
+    border-bottom: none;
+    border-radius: 0px 55px 0 0;
+    border-color: rgb(101, 101, 101);
+    border-width: 3px;
 }
 
 .test-box-content {
-	background: black;
-	margin-top: 50px;
-	padding: 10px;
+    font-style: italic;
+    background: rgba(12, 18, 35, 0.78);
+    margin-top: -3px;
+    padding: 10px;
+    padding-top: 25px;
+    padding-left: 50px;
+    border-style: solid;
+    border-radius: 0 0 0 55px;
+    border-color: rgb(101, 101, 101);
+    border-width: 3px;
+    border-top: none;
+    height: 600px;
+    overflow: auto;
 }

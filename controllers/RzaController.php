@@ -39,12 +39,11 @@ class RzaController extends Controller
         }
 		$test = new Test;
 		$test->getTest($ajax['id']);
-		$test = $test->test;
-		$questions = $test->questions;	
-		
-		
+	    $testActive = $test->testActive;
+		$questions = $test->questions;
+
 		return $this->renderPartial('_test', [
-			'testName' => $test->name,
+			'testName' => $testActive->name,
 			'questions' => $questions,
 		]);
 	}
