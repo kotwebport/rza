@@ -9,12 +9,14 @@ use yii\helpers\Html;
     <?php foreach ($questions as $question): ?>
         <div class="test-content">
             <p class="question"> <?= $question['question'] ?></p>
-            <p class="answer">Ответ: <?= $question['answer'] ?></p>
+            <div class="answer">
+                <?= Html::img('@web/images/rza/close.png', ['alt' => 'закрыть', 'width' => '15px', 'class' => 'close']) ?>
+                <p> <?= $question['answer'] ?></p>
             <?php if ($question['image']): ?>
                 <?php $url = '@web/images/rza/question/' . $question['image'] ?>
                 <?= Html::img($url, ['alt' => 'image', 'width' => '100%', 'class' => 'img']) ?>
             <?php endIf; ?>
+            </div>
         </div>
     <?php endforeach; ?>
-</div>	
-
+</div>

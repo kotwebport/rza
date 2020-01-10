@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 use yii\bootstrap\NavBar;
 ?>
-<div class="">
+<div class="section-content">
     <ul class="test-box nav flex-column">      
     <?php foreach ($tests as $test): ?>
         <li><a class="nav-item js-getAjax" href="<?= Url::toRoute(['rza/test', 'testId' =>$test['id']]); ?>"

@@ -1,28 +1,6 @@
 $("document").ready(function () {
     $('.js-getAjax').on('click', function () {
-		var id = $(this).data('id');
-        var url = '?r=' + $(this).data('url');
-        $.ajax({
-            url: url,
-            type: 'GET',
-            dataType: 'html',
-            data: {
-               'id': id
-            },
-            success: function (res) {
-				$('.js-section').html(res);
-				$('.test-box').css("display", "block");
-            },
-            error: function () {
-                alert('Сбой передачи');
-            }
-        });
-        return false;
-    });	
-		
-					
-	$('.js-section').on('click', '.js-getAjax', function () {
-		var id = $(this).data('id');
+        var id = $(this).data('id');
         var url = '?r=' + $(this).data('url');
         $.ajax({
             url: url,
@@ -32,43 +10,49 @@ $("document").ready(function () {
                 'id': id
             },
             success: function (res) {
-			    $('.js-test').html(res);
-				$('.test-box').css("display", "none");
+                $('.js-section').html(res);
+                $('.test-box').css("display", "block");
             },
             error: function () {
                 alert('Сбой передачи');
             }
         });
-        return false;			
-    });	
-
-    $('.js_start').on('click', '.vis_close', function () {
-        $(this).toggleClass("vis_close vis_open");
-        $('.vis_answer').css('display', 'block');
-        $('#image').css('display', 'block');
+        return false;
     });
 
-    $('.js_start').on('click', '.vis_open', function () {
-        $(this).toggleClass("vis_open vis_close");
-        $('.vis_answer').css('display', 'none');
-        $('#image').css('display', 'none');
+
+    $('.js-section').on('click', '.js-getAjax', function () {
+        var id = $(this).data('id');
+        var url = '?r=' + $(this).data('url');
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'html',
+            data: {
+                'id': id
+            },
+            success: function (res) {
+                $('.js-test').html(res);
+                $('.test-box').css("display", "none");
+            },
+            error: function () {
+                alert('Сбой передачи');
+            }
+        });
+        return false;
     });
 
-    // $('.js_start').on('mouseenter', '.question', function () {
-    //     $(this).toggleClass("question question-mouseenter")
-    // });
-    //
-    // $('.js_start').on('mouseleave', '.question-mouseenter', function () {
-    //     $(this).toggleClass("question-mouseenter question")
-    // });
-    //
-    // $('.js_start').on('mouseenter', '.answer', function () {
-    //     $(this).toggleClass("answer answer-mouseenter")
-    // });
-    //
-    // $('.js_start').on('mouseleave', '.answer-mouseenter', function () {
-    //     $(this).toggleClass("answer-mouseenter answer")
-    // });
+    $('.js-section').on('click', '.question', function () {
+        $('.answer').css('display', 'none');
+        $(this).next('.answer').css('display', 'block');
+        $('.question').css('display', 'none');
+    });
+
+    $('.js-section').on('click', '.close', function () {
+        $(this).parent().css('display', 'none');
+        $('.question').css('display', 'block');
+    });
+
 
     $('.archive').on('click', function () {
         $('.js_start').css('display', 'none');
