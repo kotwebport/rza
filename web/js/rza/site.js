@@ -48,12 +48,17 @@ $("document").ready(function () {
         $('.question').css('display', 'none');
     });
 
-    $('.js-section').on('click', '.close', function () {
-        $(this).parent().css('display', 'none');
+    $('.js-section').on('click', '.answer-close', function () {
+		$('.answer').css('display', 'none');
+        //$(this).parent().css('display', 'none');
         $('.question').css('display', 'block');
     });
 
 
+	
+	
+	
+	
     $('.archive').on('click', function () {
         $('.js_start').css('display', 'none');
         $(this).parent().next().css('display', 'block');
