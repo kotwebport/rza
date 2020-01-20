@@ -47,7 +47,7 @@ ltAppAsset::register($this);
 
 <footer class="footer">
     <div class="container copyright">
-        <p>2020г - Бугаев К.В.</p>
+        <p>Конспект РЗА<span style="padding-right: 15px; padding-left: 15px">&copy;</span> Разработка: Бугаев К.В. <?= date('Y') ?> </p>
     </div>
 </footer>
 

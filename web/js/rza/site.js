@@ -46,11 +46,12 @@ $("document").ready(function () {
         $('.answer').css('display', 'none');
         $(this).next('.answer').css('display', 'block');
         $('.question').css('display', 'none');
+        $('.answer-close').css('visibility', 'visible');
     });
 
     $('.js-section').on('click', '.answer-close', function () {
-		$('.answer').css('display', 'none');
-        //$(this).parent().css('display', 'none');
+        $(this).css('visibility', 'hidden');
+        $('.answer').css('display', 'none');
         $('.question').css('display', 'block');
     });
 
