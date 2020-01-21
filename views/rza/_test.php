@@ -11,7 +11,7 @@ use yii\helpers\Html;
         <div class="test-content">
             <p class="question"> <?= $question['question'] ?></p>
             <div class="answer"> 
-				<h5><?=$question['question']; ?></h5>
+				<h4><?=$question['question']; ?></h4>
                 <p><?= $question['answer']; ?></p>
             <?php if ($question['image']): ?>
                 <?php $url = '@web/images/rza/question/' . $question['image'] ?>
