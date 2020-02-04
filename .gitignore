@@ -15,7 +15,7 @@ Thumbs.db
 # composer vendor dir
 /vendor
 
-/web/imajes/rza/question
+/web/images/rza/question
 
 # composer itself is not needed
 composer.phar
