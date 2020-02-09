@@ -12,6 +12,8 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 
+/web/images/rza/question
+
 # composer vendor dir
 /vendor
 
