@@ -141,7 +141,6 @@ p.question {
     padding-top: 3px;
     padding-bottom: 20px;
 }
-
-b.b {
+b.b, p.b {
     color: #A4E6DE;
 }
