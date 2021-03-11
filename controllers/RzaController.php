@@ -9,6 +9,7 @@ use app\classes\rza\Test;
 class RzaController extends Controller
 {	
 	//public $layout = 'rza/main';
+ 
 	
     public function actionIndex()
     {

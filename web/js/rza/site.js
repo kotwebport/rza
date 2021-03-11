@@ -10,6 +10,7 @@ $("document").ready(function () {
                 'id': id
             },
             success: function (res) {
+				console.log('Проверка');
                 $('.js-section').html(res);
                 $('.test-box').css("display", "block");
             },
